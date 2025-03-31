@@ -81,6 +81,12 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.onboarding h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* Grid & Docs */
 .doc-grid {
   display: grid;
@@ -130,5 +136,12 @@ button:hover {
 
   .doc-embed {
       height: 70vh;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .onboarding h2 img {
+    width: 25px;
   }
 }
