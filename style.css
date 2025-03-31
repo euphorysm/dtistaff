@@ -158,3 +158,23 @@ button:hover {
     padding: 20px;
   }
 }
+
+/* Ensure iFrame Resizes Correctly on Mobile */
+.doc-embed {
+  width: 100%;
+  min-height: 80vh; /* Default for larger screens */
+  border: none;
+  margin-top: 15px;
+  border-radius: 5px;
+  max-width: 100vw; /* Prevents overflow */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .doc-embed {
+    width: 100vw; /* Full width on mobile */
+    height: 100vh; /* Make full page on mobile */
+    max-height: 100vh;
+  }
+}
+
