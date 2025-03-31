@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Dress to Impress Team</title>
-        <link rel="stylesheet" href="style.css">
-        <!-- Add these new lines for fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-      </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress to Impress Team</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
 <body>
-  <header>
-    <h1>Welcome to the Dress to Impress Staff Team!</h1>
-  </header>
-  
-  <section class="onboarding">
-    <h2>New Team Members</h2>
-    <p>Start here to get onboarded!</p>
-    <button id="docs-button">Open Important Docs</button>
-  </section>
+    <!-- Fixed Top Bar -->
+    <div class="top-bar">
+        <img src="logo.png" alt="Dress to Impress Logo" class="logo">
+        <div class="credit">site by @euphorysm ♡</div>
+    </div>
 
-<!-- In your HTML file -->
-<section class="documents">
-    <h2>Live Documents</h2>
-    <div class="doc-grid">
-      <!-- First Doc -->
-      <div class="doc-container">
-        <h3>Events</h3>
-        <iframe 
-          src="https://docs.google.com/document/d/1st-XhcQknIZNSwtXAAlfQBnm_NQh0gpepVBMz1NLwd8/preview?rm=minimal"
-          class="doc-embed">
-        </iframe>
-      </div>
-      
-      <!-- Second Doc (add your other doc link) -->
-      <div class="doc-container">
-        <h3>Giveaways</h3>
-        <iframe 
-          src="https://docs.google.com/document/d/1YuLa7JpyXJyyLHBF8KNc9d4RAK-TP9hccdYOkVNUuQ0/preview?rm=minimal"
-          class="doc-embed">
-        </iframe>
-      </div>
+    <header>
+        <h1>Welcome to the Dress to Impress Staff Team!</h1>
+    </header>
 
-  
+    <section class="onboarding">
+        <h2>New Team Members</h2>
+        <p>Start here to get onboarded!</p>
+        <button id="docs-button">Open Important Docs</button>
+    </section>
 
-  <script src="script.js"></script>
+    <section class="documents">
+        <h2>Live Documents</h2>
+        <div class="doc-grid">
+            <div class="doc-container">
+                <h3>Events</h3>
+                <iframe src="https://docs.google.com/document/d/1st-XhcQknIZNSwtXAAlfQBnm_NQh0gpepVBMz1NLwd8/preview?rm=minimal"
+                        class="doc-embed"></iframe>
+            </div>
+
+            <div class="doc-container">
+                <h3>Giveaways</h3>
+                <iframe src="https://docs.google.com/document/d/1YuLa7JpyXJyyLHBF8KNc9d4RAK-TP9hccdYOkVNUuQ0/preview?rm=minimal"
+                        class="doc-embed"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
