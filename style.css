@@ -116,11 +116,13 @@ button:hover {
 /* Fix for Squished Docs */
 .doc-embed {
   width: 100%;
-  height: 550px;
+  height: 80vh; /* Make it relative to screen height */
   border: none;
   margin-top: 15px;
   border-radius: 5px;
+  max-width: 100%;
 }
+
 
 /* Document Titles */
 .doc-container h3 {
