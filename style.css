@@ -42,17 +42,18 @@ body {
 /* Header Styles */
 header {
   background: #e4769b;
-  padding: 20px;
+  padding: 12px 20px; /* Reduced padding */
   text-align: center;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 header h1 {
   font-family: 'Berkshire Swash', cursive;
-  font-size: 2rem;
+  font-size: 1.7rem; /* Reduced font size */
   margin: 0;
 }
+
 
 /* Buttons */
 button {
@@ -117,6 +118,8 @@ button:hover {
 .doc-container h3 a:hover {
   color: #e4769b;
 }
+
+
 
 
 /* Mobile Responsive Styles */
