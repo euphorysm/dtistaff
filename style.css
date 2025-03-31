@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 20px;
   line-height: 1.6;
-  color: #ffb6d9; /* Light pink text for better readability */
+  color: #ffb6d9;
 }
 
 /* Fixed Top Bar */
@@ -27,7 +27,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensure Logo is Visible */
+/* Logo */
 .logo {
   height: 30px;
   width: auto;
@@ -36,38 +36,36 @@ body {
 
 /* Text Credit */
 .credit {
-  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
-  color: rgba(255, 182, 217, 0.8); /* Lighter pink */
+  color: rgba(255, 182, 217, 0.8);
   margin-left: 15px;
   letter-spacing: 0.5px;
 }
 
-/* Ensure Content is Not Hidden Under Fixed Bar */
+/* Prevent Content from Hiding Under Fixed Bar */
 body {
   padding-top: 70px !important;
 }
 
 /* Header */
 header {
-  background: #e4769b; /* Dark pink */
-  padding: 15px 20px; /* Slimmer header */
+  background: #e4769b;
+  padding: 20px;
   text-align: center;
   color: white;
 }
 
 header h1 {
   font-family: 'Berkshire Swash', cursive;
-  font-size: 2rem; /* Slightly smaller */
+  font-size: 2rem;
   margin: 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons */
 button {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  background: #e4769b; /* Vibrant pink */
+  background: #e4769b;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -79,17 +77,17 @@ button {
 }
 
 button:hover {
-  background: #b3466a; /* Darker pink */
+  background: #b3466a;
 }
 
-/* Onboarding & Documents Sections */
+/* Content Sections */
 .onboarding, .documents {
   background: #262626;
   padding: 25px;
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  color: #ffd1dc; /* Softer pink text */
+  color: #ffd1dc;
 }
 
 /* Document Grid */
@@ -115,9 +113,10 @@ button:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Fix for Squished Docs */
 .doc-embed {
   width: 100%;
-  height: 600px;
+  height: 550px;
   border: none;
   margin-top: 15px;
   border-radius: 5px;
@@ -125,23 +124,36 @@ button:hover {
 
 /* Document Titles */
 .doc-container h3 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #ff80ab; /* Bright pink */
+  color: #ff80ab;
   margin: 0 0 10px 0;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  /* Adjust Header */
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    padding: 15px;
   }
 
+  /* Stack Documents on Small Screens */
   .doc-grid {
     grid-template-columns: 1fr;
   }
 
+  /* Increase Document Height */
   .doc-embed {
-    height: 500px;
+    height: 550px;
+  }
+
+  /* Improve Button & Section Spacing */
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .onboarding, .documents {
+    padding: 20px;
   }
 }
