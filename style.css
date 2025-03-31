@@ -1,3 +1,4 @@
+
 html {
   scroll-behavior: smooth;
 }
@@ -24,7 +25,7 @@ body {
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -44,6 +45,7 @@ header {
   padding: 20px;
   text-align: center;
   color: white;
+  margin-bottom: 20px;
 }
 
 header h1 {
@@ -92,24 +94,30 @@ button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.google-doc-embed {
+.doc-embed {
   width: 100%;
   height: 80vh;
   border: none;
   border-radius: 5px;
 }
 
-.google-doc-embed {
-  border: none !important;
-  outline: none;
+.doc-embed {
+    border: none !important;
+    outline: none;
 }
 
-/* Responsive for Google Docs/Sheets */
-.google-doc-embed {
-  aspect-ratio: 16 / 9;
-  max-height: 80vh;
-  overflow: hidden;
+/* Link Styling */
+.doc-container h3 a {
+  color: #ffd1dc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
+
+.doc-container h3 a:hover {
+  color: #e4769b;
+}
+
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
@@ -117,7 +125,7 @@ button:hover {
       grid-template-columns: 1fr;
   }
 
-  .google-doc-embed {
+  .doc-embed {
       height: 70vh;
   }
 }
