@@ -19,15 +19,28 @@
     <button id="docs-button">Open Important Docs</button>
   </section>
 
-  <section class="documents">
+<!-- In your HTML file -->
+<section class="documents">
     <h2>Live Documents</h2>
-    <iframe 
-      src="https://docs.google.com/document/d/1st-XhcQknIZNSwtXAAlfQBnm_NQh0gpepVBMz1NLwd8/preview?rm=minimal" 
-      width="100%" 
-      height="600px"
-      frameborder="0"
-      style="border: none;"
-    ></iframe>
+    <div class="doc-grid">
+      <!-- First Doc -->
+      <div class="doc-container">
+        <h3>Events</h3>
+        <iframe 
+          src="https://docs.google.com/document/d/1st-XhcQknIZNSwtXAAlfQBnm_NQh0gpepVBMz1NLwd8/preview?rm=minimal"
+          class="doc-embed">
+        </iframe>
+      </div>
+      
+      <!-- Second Doc (add your other doc link) -->
+      <div class="doc-container">
+        <h3>Giveaways</h3>
+        <iframe 
+          src="https://docs.google.com/document/d/1YuLa7JpyXJyyLHBF8KNc9d4RAK-TP9hccdYOkVNUuQ0/edit?tab=t.0#heading=h.9pecuvz947jepreview?rm=minimal"
+          class="doc-embed">
+        </iframe>
+      </div>
+    </div>
   </section>
 
   <script src="script.js"></script>
