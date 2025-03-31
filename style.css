@@ -76,20 +76,82 @@ header h1 {
 .onboarding h2 {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   margin: 0 0 5px 0;
-  justify-content: center; 
+  justify-content: center;
   color: #ffb6d9;
+  position: relative;
+  padding: 0 30px;
+}
+
+.onboarding h2::before,
+.onboarding h2::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url('bow.gif') center/contain no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: float 2s ease-in-out infinite;
+}
+
+.onboarding h2::before {
+  left: -5px;
+}
+
+.onboarding h2::after {
+  right: -5px;
+}
+
+.onboarding h2 img {
+  display: none;
+}
+
+.onboarding h2 img {
+  animation: float 2s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+
+.doc-container:hover {
+  outline: 2px dotted rgba(255, 182, 217, 0.4); /* Changed from 0.6 to 0.3 */
+  outline-offset: 2px;
 }
 
 .documents h2 {
   font-family: 'Berkshire Swash', cursive;
-  text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #ffb6d9;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   text-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  display: flex; /* Changed from inline-flex to flex */
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 6px 20px;
+  background: rgba(228, 118, 155, 0.15);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 182, 217, 0.3);
+  box-shadow: 
+    inset 0 0 8px rgba(255, 182, 217, 0.1),
+    0 2px 4px rgba(0,0,0,0.1);
+  width: fit-content; /* Added to ensure proper centering */
 }
+.documents h2::before,
+.documents h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url('melody.gif') center/contain no-repeat;
+  opacity: 0.8;
+}
+
 
 .onboarding p {
   margin: 0 0 10px 0;
@@ -104,19 +166,28 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(228, 118, 155, 0.4);
+  box-shadow: 0 2px 5px rgba(228, 118, 155, 0.3); /* Reduced from 0 4px 10px rgba(228, 118, 155, 0.4) */
 }
+
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
 
 button:hover {
   background: linear-gradient(to right, #b3466a, #e4769b);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(228, 118, 155, 0.6);
+  box-shadow: 0 3px 8px rgba(228, 118, 155, 0.4); /* Reduced from 0 6px 15px rgba(228, 118, 155, 0.6) */
 }
 
 .doc-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 25px;
+}
+
+.top-bar {
+  box-shadow: none;
 }
 
 .doc-container {
@@ -213,6 +284,7 @@ body::after {
     max-width: 100%;
     padding: 15px;
   }
+  
   
   .doc-embed {
     height: 300px;
