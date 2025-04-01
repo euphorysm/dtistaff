@@ -1,18 +1,18 @@
-/* Updated CSS with coquette pastel dark theme */
+/* Updated CSS with Sanrio-inspired dark pastel theme */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #1a1a1a;
+  background: #1a1a2e; /* Darker blue-based background */
   color: #ffd6e7;
   margin: 0;
   padding: 20px;
   line-height: 1.6;
   padding-top: 70px;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(255, 182, 230, 0.1) 0%, rgba(26, 26, 26, 1) 90%),
+    radial-gradient(circle at 10% 20%, rgba(255, 182, 230, 0.1) 0%, rgba(26, 26, 46, 1) 90%),
     url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,10 Q50,5 70,10 Q90,15 90,30 Q95,50 90,70 Q85,90 70,90 Q50,95 30,90 Q10,85 10,70 Q5,50 10,30 Q15,10 30,10 Z" fill="none" stroke="rgba(255,182,230,0.03)" stroke-width="1"/></svg>');
 }
 
@@ -22,7 +22,7 @@ body {
   left: 0;
   width: 100%;
   height: 50px;
-  background: rgba(30, 20, 30, 0.95);
+  background: rgba(40, 30, 60, 0.95); /* Darker purple */
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -46,7 +46,7 @@ body {
 }
 
 header {
-  background: linear-gradient(135deg, #ffb6e6 0%, #ffd1e6 100%);
+  background: linear-gradient(135deg, #ffb6e6 0%, #c5a3ff 100%); /* Added purple to gradient */
   padding: 20px;
   text-align: center;
   color: #3a1a3a;
@@ -107,7 +107,7 @@ header h1::after {
 }
 
 .onboarding {
-  background: rgba(40, 30, 40, 0.85);
+  background: rgba(50, 40, 70, 0.85); /* Darker purple */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 
@@ -160,7 +160,7 @@ header h1::after {
 }
 
 button {
-  background: linear-gradient(135deg, #ffb6e6, #ff8fd8);
+  background: linear-gradient(135deg, #ffb6e6, #c5a3ff); /* Added purple */
   color: #3a1a3a;
   padding: 12px 25px;
   border: none;
@@ -190,7 +190,7 @@ button::before {
 }
 
 button:hover {
-  background: linear-gradient(135deg, #ff8fd8, #ff6bcb);
+  background: linear-gradient(135deg, #ff8fd8, #b28dff); /* Darker purple */
   transform: translateY(-3px);
   box-shadow: 
     0 6px 15px rgba(255, 182, 230, 0.6),
@@ -203,6 +203,7 @@ button:hover::before {
 
 .documents {
   position: relative;
+  padding-bottom: 40px;
 }
 
 .documents::before {
@@ -227,7 +228,7 @@ button:hover::before {
   justify-content: center;
   gap: 15px;
   padding: 10px 30px;
-  background: rgba(50, 30, 50, 0.7);
+  background: rgba(60, 40, 80, 0.7); /* Darker purple */
   border-radius: 50px;
   border: 1px solid rgba(255, 200, 230, 0.4);
   box-shadow: 
@@ -262,14 +263,14 @@ button:hover::before {
 
 .doc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
   padding: 20px 0;
 }
 
-.doc-container {
-  background: rgba(50, 35, 50, 0.8);
-  padding: 20px;
+.doc-card {
+  background: rgba(60, 45, 80, 0.8); /* Darker purple */
+  padding: 25px;
   border-radius: 15px;
   box-shadow: 
     0 5px 20px rgba(0, 0, 0, 0.3),
@@ -281,118 +282,99 @@ button:hover::before {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 400px; /* Minimum height */
+  min-height: 200px;
 }
 
-.onboarding h2 {
-  display: inline-flex;
-  align-items: center;
-  margin: 0 0 10px 0;
-  justify-content: center;
-  color: #ffb6e6;
-  position: relative;
-  padding: 0 20px;
-  text-shadow: 0 0 8px rgba(255, 182, 230, 0.4);
-  font-family: 'Berkshire Swash', cursive;
-  font-size: 1.5rem;
-  gap: 15px;
-}
-
-.bow {
-  width: 30px;
-  height: 30px;
-  filter: drop-shadow(0 0 8px rgba(255, 182, 230, 0.6));
-  animation: float 3s ease-in-out infinite;
-}
-
-.left-bow {
-  animation-delay: 0.2s;
-}
-
-.right-bow {
-  animation-delay: 0.4s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
-}
-
-.doc-container:hover {
+.doc-card:hover {
   transform: translateY(-8px);
   box-shadow: 
     0 12px 25px rgba(255, 182, 230, 0.4),
     inset 0 0 0 1px rgba(255, 220, 240, 0.3);
 }
 
-.doc-gif {
-  width: 100%;
-  border-radius: 10px;
+.doc-icon {
+  font-size: 2.5rem;
   margin-bottom: 15px;
-  border: none; /* This removes the border */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  color: #ffb6e6;
+  text-shadow: 0 0 10px rgba(255, 182, 230, 0.5);
 }
 
-.doc-embed {
-  width: 100%;
-  height: 100%; /* Let container determine height */
-  border: none;
-  border-radius: 8px;
-  overflow: hidden; /* Prevent any scrollbars */
-}
-
-.doc-container h3 a {
+.doc-card h3 {
   color: #ffd6e7;
-  text-decoration: none;
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
   font-weight: 600;
+}
+
+.doc-card p {
+  color: #e2c1ff;
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.doc-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 182, 230, 0.1);
+  color: #ffd6e7;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
   transition: all 0.3s ease;
-  display: inline-block;
-  position: relative;
-  font-size: 1.2rem;
-  padding: 5px 0;
+  border: 1px solid rgba(255, 200, 230, 0.3);
 }
 
-.doc-container h3 a:hover {
-  color: #ff8fd8;
-  transform: translateX(5px);
-  text-shadow: 0 0 8px rgba(255, 143, 216, 0.4);
+.doc-link:hover {
+  background: rgba(255, 182, 230, 0.2);
+  color: #ffb6e6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 182, 230, 0.3);
 }
 
-.doc-container h3 a::after {
-  content: '';
+.link-arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.doc-link:hover .link-arrow {
+  transform: translateX(3px);
+}
+
+/* Sanrio character decorations */
+.sanrio-character {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ffb6e6, #ff8fd8);
-  transition: width 0.4s ease;
+  width: 80px;
+  height: 80px;
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
 }
 
-.doc-container h3 a:hover::after {
-  width: 100%;
+/* Floating hearts animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #2a1a2a;
+  background: #2a1a3a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#ffb6e6, #ff8fd8);
+  background: linear-gradient(#ffb6e6, #c5a3ff);
   border-radius: 10px;
   border: 1px solid rgba(255, 220, 240, 0.3);
 }
 
-
+/* Background decorations */
 body::after {
   content: "";
   position: fixed;
@@ -403,72 +385,12 @@ body::after {
   pointer-events: none;
   background: 
     radial-gradient(circle at 20% 30%, rgba(255, 182, 230, 0.08) 0%, transparent 20%),
-    radial-gradient(circle at 80% 70%, rgba(255, 143, 216, 0.08) 0%, transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(197, 163, 255, 0.08) 0%, transparent 20%),
     url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="rgba(255,200,230,0.02)" stroke-width="1" stroke-dasharray="5,5"/></svg>');
   z-index: -1;
 }
 
-.doc-ripple {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: radial-gradient(circle, rgba(255,182,230,0.15) 0%, transparent 70%);
-  animation: rippleFade 1s ease-out;
-  border-radius: 15px;
-  pointer-events: none;
-}
-
-@keyframes rippleFade {
-  0% { transform: scale(0.8); opacity: 0.6; }
-  100% { transform: scale(1.2); opacity: 0; }
-}
-
-.header-sparkle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-  opacity: 0;
-  filter: blur(1px);
-  animation: sparkleTwinkle 2.5s ease-out;
-  box-shadow: 0 0 5px 1px rgba(255, 220, 240, 0.8);
-}
-
-/* ===== ENHANCED HEARTS (BEHIND CONTENT) ===== */
-.heart-float {
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="rgba(255,182,230,0.6)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
-  animation: floatUp 9s linear infinite;
-  opacity: 0;
-  z-index: -1; /* Behind everything */
-  pointer-events: none;
-  filter: blur(1.5px) drop-shadow(0 0 6px rgba(255,182,230,0.4));
-  transform: rotate(-10deg);
-}
-
-@keyframes floatUp {
-  0% { 
-    transform: translateY(110vh) rotate(-10deg) scale(0.8);
-    opacity: 0; 
-  }
-  15% { opacity: 0.6; }
-  85% { opacity: 0.6; }
-  100% { 
-    transform: translateY(-30vh) rotate(10deg) scale(1.1);
-    opacity: 0; 
-  }
-}
-
-@keyframes sparkleTwinkle {
-  0%,100% { opacity: 0; transform: scale(0); }
-  50% { opacity: 0.8; transform: scale(1.5); }
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .doc-grid {
     grid-template-columns: 1fr;
@@ -477,10 +399,6 @@ body::after {
   .onboarding {
     max-width: 100%;
     padding: 15px;
-  }
-  
-  .doc-embed {
-    height: 300px;
   }
   
   header h1 {
@@ -505,4 +423,49 @@ body::after {
   .documents h2::after {
     right: -25px;
   }
+}
+
+/* ===== FLOATING HEARTS ===== */
+.heart-float {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="rgba(255,182,230,0.6)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+  animation: floatUp 9s linear infinite;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(1.5px) drop-shadow(0 0 6px rgba(255,182,230,0.4));
+  transform: rotate(-10deg);
+}
+
+@keyframes floatUp {
+  0% { 
+    transform: translateY(110vh) rotate(-10deg) scale(0.8);
+    opacity: 0; 
+  }
+  15% { opacity: 0.6; }
+  85% { opacity: 0.6; }
+  100% { 
+    transform: translateY(-30vh) rotate(10deg) scale(1.1);
+    opacity: 0; 
+  }
+}
+
+/* Add some Sanrio character silhouettes in the background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path d="M50,10 C70,10 85,25 85,45 C85,65 70,80 50,80 C30,80 15,65 15,45 C15,25 30,10 50,10 Z M35,35 C40,30 45,30 50,35 C55,30 60,30 65,35 C60,40 55,40 50,35 C45,40 40,40 35,35 Z" fill="%23ffb6e6"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><circle cx="50" cy="50" r="40" fill="%23c5a3ff"/><circle cx="35" cy="40" r="5" fill="%231a1a2e"/><circle cx="65" cy="40" r="5" fill="%231a1a2e"/><path d="M35,60 Q50,70 65,60" fill="none" stroke="%231a1a2e" stroke-width="3"/></svg>');
+  background-position: 20% 30%, 80% 70%;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  z-index: -1;
 }
