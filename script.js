@@ -1,8 +1,9 @@
+// Your existing button click handler
 document.getElementById("docs-button").addEventListener("click", function() {
-    alert("This will later open Google Docs!");
-  });
+  alert("This will later open Google Docs!");
+});
 
-  // Adds a gentle ripple effect when hovering documents
+// Your existing ripple effect
 document.querySelectorAll('.doc-container').forEach(container => {
   container.addEventListener('mouseenter', (e) => {
     const ripple = document.createElement('div');
@@ -12,7 +13,7 @@ document.querySelectorAll('.doc-container').forEach(container => {
   });
 });
 
-// Creates occasional subtle sparkles in header
+// Your existing header sparkles
 function addHeaderSparkle() {
   if (!document.querySelector('header')) return;
   
@@ -27,16 +28,15 @@ function addHeaderSparkle() {
 }
 addHeaderSparkle();
 
+// Your existing iframe resizer
 function resizeIframes() {
   document.querySelectorAll('.doc-embed').forEach(iframe => {
     iframe.onload = function() {
-      // Remove Google's toolbar if present
       try {
         const toolbar = iframe.contentDocument.querySelector('[role="toolbar"]');
         if (toolbar) toolbar.style.display = 'none';
       } catch(e) {}
       
-      // Auto-resize to fit content
       setTimeout(() => {
         const body = iframe.contentDocument.body;
         iframe.style.height = body.scrollHeight + 'px';
@@ -45,6 +45,29 @@ function resizeIframes() {
   });
 }
 
-// Run on load and whenever window resizes
 window.addEventListener('load', resizeIframes);
 window.addEventListener('resize', resizeIframes);
+
+/* ===== ENHANCED FLOATING HEARTS ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  // Create 8 subtle hearts (behind content)
+  for (let i = 0; i < 8; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart-float';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.top = (Math.random() * 20 + 80) + 'vh'; // Start near bottom
+    heart.style.animationDelay = Math.random() * 8 + 's';
+    heart.style.opacity = Math.random() * 0.4 + 0.3;
+    document.body.appendChild(heart);
+  }
+
+  // Your existing sparkle clicks (unchanged)
+  document.addEventListener('click', (e) => {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = (e.clientX - 4) + 'px';
+    sparkle.style.top = (e.clientY - 4) + 'px';
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 1500);
+  });
+});
