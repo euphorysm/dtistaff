@@ -27,3 +27,24 @@ function addHeaderSparkle() {
 }
 addHeaderSparkle();
 
+function resizeIframes() {
+  document.querySelectorAll('.doc-embed').forEach(iframe => {
+    iframe.onload = function() {
+      // Remove Google's toolbar if present
+      try {
+        const toolbar = iframe.contentDocument.querySelector('[role="toolbar"]');
+        if (toolbar) toolbar.style.display = 'none';
+      } catch(e) {}
+      
+      // Auto-resize to fit content
+      setTimeout(() => {
+        const body = iframe.contentDocument.body;
+        iframe.style.height = body.scrollHeight + 'px';
+      }, 100);
+    };
+  });
+}
+
+// Run on load and whenever window resizes
+window.addEventListener('load', resizeIframes);
+window.addEventListener('resize', resizeIframes);
