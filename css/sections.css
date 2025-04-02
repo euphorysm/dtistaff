@@ -1,0 +1,181 @@
+/* ===== PAGE SECTIONS ===== */
+header {
+    background: linear-gradient(135deg, #ffb6e6 0%, #c5a3ff 100%);
+    padding: 20px;
+    text-align: center;
+    color: #3a1a3a;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 
+      0 4px 20px rgba(255, 182, 230, 0.5),
+      inset 0 0 30px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 220, 240, 0.5);
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 30"><path d="M0,15 Q30,30 60,15 Q90,0 120,15" fill="none" stroke="rgba(255,220,240,0.7)" stroke-width="2"/></svg>') center/contain no-repeat;
+  }
+  
+  header h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 40px;
+  }
+  
+  header h1::before,
+  header h1::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(255, 182, 230, 0.6));
+  }
+  
+  header h1::before {
+    left: 0;
+    animation-delay: 0.2s;
+  }
+  
+  header h1::after {
+    right: 0;
+    animation-delay: 0.4s;
+  }
+  
+  .onboarding {
+    background: rgba(50, 40, 70, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 0 1px rgba(255, 220, 240, 0.2);
+    color: #ffd6e7;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(255, 200, 230, 0.3);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .onboarding::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,50 Q35,20 50,50 Q65,80 80,50" fill="none" stroke="rgba(255,200,230,0.2)" stroke-width="8"/></svg>') center/contain no-repeat;
+    opacity: 0.5;
+  }
+  
+  .onboarding h2 {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    justify-content: center;
+    color: #ffb6e6;
+    position: relative;
+    padding: 0 40px;
+    text-shadow: 0 0 8px rgba(255, 182, 230, 0.4);
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.5rem;
+  }
+  
+  .onboarding h2::before,
+  .onboarding h2::after {
+    content: none;
+  }
+  
+  .onboarding p {
+    margin: 0 0 15px 0;
+    font-size: 1.05rem;
+  }
+  
+  .documents {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  
+  .documents::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30"><path d="M0,15 Q25,0 50,15 Q75,30 100,15" fill="none" stroke="rgba(255,200,230,0.3)" stroke-width="1"/></svg>') center/contain repeat-x;
+    opacity: 0.5;
+  }
+  
+  .documents h2 {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.8rem;
+    color: #ffb6e6;
+    margin: 0 auto 25px auto;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 30px;
+    background: rgba(60, 40, 80, 0.7);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 200, 230, 0.4);
+    box-shadow: 
+      inset 0 0 15px rgba(255, 182, 230, 0.2),
+      0 4px 10px rgba(0,0,0,0.15);
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .documents h2::before,
+  .documents h2::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(255, 182, 230, 0.6));
+  }
+  
+  .documents h2::before {
+    left: -35px;
+    animation-delay: 0.2s;
+  }
+  
+  .documents h2::after {
+    right: -35px;
+    animation-delay: 0.4s;
+  }
+  
+  .doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+  }
